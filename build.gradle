@@ -9,6 +9,11 @@ repositories {
     mavenCentral()
 }
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
 dependencies {
     implementation 'org.testng:testng:7.1.0'
     implementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
@@ -25,7 +30,7 @@ test {
 sourceSets {
     main {
         java {
-            srcDir 'src'
+            srcDir 'src/com/northendlabs'
             srcDir 'test'
         }
     }
