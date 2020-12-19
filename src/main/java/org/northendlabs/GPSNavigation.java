@@ -12,10 +12,7 @@ package org.northendlabs;
 
 import java.lang.Math;
 
-/**
- * gpsUnits are the constants to allow different calculations based upon different units of distance.
- * All algorithms are based on descriptions in http://www.movable-type.co.uk/scripts/latlong.html
- */
+
 
 
 
@@ -25,6 +22,10 @@ import java.lang.Math;
  */
 public class GPSNavigation {
 
+    /**
+     * gpsUnits are the constants to allow different calculations based upon different units of distance.
+     * All algorithms are based on descriptions in http://www.movable-type.co.uk/scripts/latlong.html
+     */
     public enum gpsUnits {
         KILOMETERS,
         MILES,
@@ -163,7 +164,6 @@ public class GPSNavigation {
             default:
                 localR = R_IN_KILOMETERS;
         }
-        ;
 
         double newLat = Math.asin(Math.sin(lat) * Math.cos(newDistance / localR)
                 + Math.cos(lat) * Math.sin(newDistance / localR) * Math.cos(newBearing));

@@ -2,8 +2,8 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group 'org.northendlabs'
+version '1.0'
 
 repositories {
     mavenCentral()
@@ -30,7 +30,7 @@ test {
 sourceSets {
     main {
         java {
-            srcDir 'src/org/northendlabs'
+            srcDir 'src'
             srcDir 'test'
         }
     }
