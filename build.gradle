@@ -10,7 +10,7 @@ repositories {
 }
 
 java {
-    withJavadocJar()
+    //withJavadocJar()
     withSourcesJar()
 }
 
@@ -30,7 +30,7 @@ test {
 sourceSets {
     main {
         java {
-            srcDir 'src/com/northendlabs'
+            srcDir 'src/org/northendlabs'
             srcDir 'test'
         }
     }

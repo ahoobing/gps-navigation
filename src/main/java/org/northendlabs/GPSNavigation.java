@@ -8,6 +8,8 @@
   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+package org.northendlabs;
+
 import java.lang.Math;
 
 /**
@@ -15,17 +17,19 @@ import java.lang.Math;
  * All algorithms are based on descriptions in http://www.movable-type.co.uk/scripts/latlong.html
  */
 
-enum gpsUnits {
-    KILOMETERS,
-    MILES,
-    NAUTICAL_MILES
-}
+
 
 
 /**
  * This class has the methods to run different GPS navigation methods.
  */
 public class GPSNavigation {
+
+    public enum gpsUnits {
+        KILOMETERS,
+        MILES,
+        NAUTICAL_MILES
+    }
 
 
     private static final double R_IN_KILOMETERS = 6378;
@@ -36,7 +40,7 @@ public class GPSNavigation {
     /**
      * This class represents a GPS Point with latitude and longitude.
      */
-    static class GPSPoint {
+    public static class GPSPoint {
         public GPSPoint(double lat, double lon) {
             latitude = lat;
             longitude = lon;
